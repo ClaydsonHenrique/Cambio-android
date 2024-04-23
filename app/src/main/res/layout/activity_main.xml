@@ -8,4 +8,82 @@
     android:layout_height="match_parent"
     tools:context="com.betrybe.currencyview.ui.views.activities.MainActivity">
 
+    <LinearLayout
+        android:id="@+id/linear_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/application_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="16dp"
+            android:text="@string/main_currency_converter"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/currency_selection_input_container"
+            style="@style/Widget.Material3.TextInputLayout.FilledBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="@string/main_currency">
+
+            <AutoCompleteTextView
+                android:id="@+id/currency_selection_input_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/load_currency_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="16sp"
+            android:text="@string/main_load_currency"
+            android:visibility="gone"
+            android:gravity="center"
+            />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/select_currency_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginTop="24dp"
+            android:textSize="16sp"
+            android:text="@string/main_select_currency"
+            />
+
+        <FrameLayout
+            android:id="@+id/waiting_response_state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            >
+
+            <com.google.android.material.progressindicator.CircularProgressIndicator
+                android:id="@+id/waiting_response_progress"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:indeterminate="true"
+                />
+
+        </FrameLayout>
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
