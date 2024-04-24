@@ -7,7 +7,7 @@ plugins {
 
 android {
     namespace = "com.betrybe.currencyview"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.betrybe.currencyview"
@@ -51,10 +51,10 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
     testImplementation 'com.squareup.okhttp3:mockwebserver:4.11.0'
     testImplementation 'org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.1'
-    testImplementation 'org.jetbrains.kotlin:kotlin-reflect:1.9.0'
-    implementation 'androidx.core:core-ktx:1.8.0'
+    testImplementation 'org.jetbrains.kotlin:kotlin-reflect:1.9.20'
+    implementation 'androidx.core:core-ktx:1.13.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
-    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'com.google.android.material:material:1.11.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation 'androidx.test.espresso:espresso-contrib:3.5.1'
     testImplementation 'junit:junit:4.13.2'
@@ -63,6 +63,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
     androidTestImplementation 'androidx.test.espresso:espresso-intents:3.5.1'
     androidTestImplementation 'org.hamcrest:hamcrest-library:2.2'
-    androidTestImplementation 'androidx.test:runner:1.1.0'
-    androidTestImplementation 'androidx.test:rules:1.1.0'
+    androidTestImplementation 'androidx.test:runner:1.5.2'
+    androidTestImplementation 'androidx.test:rules:1.5.0'
 }
